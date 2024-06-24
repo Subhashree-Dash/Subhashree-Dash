@@ -1,0 +1,92 @@
+/* Global settings */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    animation: gradientBG 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Login container */
+.login-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Login box */
+.login-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Input group */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -20px;
+    left: 0;
+    color: #feb47b;
+    font-size: 12px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #feb47b;
+}
